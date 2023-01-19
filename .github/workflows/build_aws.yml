@@ -17,14 +17,10 @@ jobs:
     - name: Step 3 - Clean and Package with Maven
       run: mvn clean package --file pom.xml
     - name: Push to deploy
-      uses: actions/github-script@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        script: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "GitHub Actions"
-          git checkout -b deploy
-          git add .
-          git commit -m "Automated Deployment"
-          git push -f origin deploy
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "GitHub Actions"
+        git checkout -b deploy
+        git add .
+        git commit -m "Automated Deployment"
+        git push -f origin deploy
