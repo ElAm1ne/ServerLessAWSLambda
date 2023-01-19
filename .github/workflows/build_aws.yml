@@ -16,7 +16,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Step 3 - Clean and Package with Maven
       run: mvn clean package --file pom.xml
-    - name: Step 4 - Push to deploy
+    - name: Push to deploy
       uses: actions/github-script@v3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
