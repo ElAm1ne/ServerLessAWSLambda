@@ -5,6 +5,7 @@ import com.serverless.ServerlessProject.Services.StockService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -28,8 +29,17 @@ public class Stocks {
     @Bean
     public Consumer<String> create()
     {
-        //return (args) -> stockServices.createStock(parseInt(args.split(",")[0]),args.split(",")[0],args.split(",")[0],parseDouble(args.split(",")[0]),parseDouble(args.split(",")[0]),parseDouble(args.split(",")[0]),parseDouble(args.split(",")[0]));
-        return (args) -> stockServices.create(args);
+        return (args) -> {
+            String[] arg_list = args.split(",");
+            int id = parseInt(arg_list[0]);
+            String name = arg_list[1];
+            String ticker = arg_list[2];
+            Double open = parseDouble(arg_list[3]);
+            Double close = parseDouble(arg_list[4]);
+            Double high = parseDouble(arg_list[5]);
+            Double low = parseDouble(arg_list[6]);
+            stockServices.create(id, name, ticker, open, close, high, low);
+        };
 
     }
 }
