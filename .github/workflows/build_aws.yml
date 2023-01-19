@@ -16,6 +16,10 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Step 3 - Clean and Package with Maven
       run: mvn clean package --file pom.xml
+    - name: Check files generated
+      run: |
+        ls -l target
+        echo "List of files in target directory"
     - name: Push to deploy
       run: |
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
