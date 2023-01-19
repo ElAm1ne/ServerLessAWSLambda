@@ -14,14 +14,10 @@ public class StockService {
         return Stocks;
     }
 
-    public void createStock(int id, String name, String ticker, Double open, Double high, Double close, Double low){
+    public void create(int id, String name, String ticker, Double open, Double close, Double high, Double low){
         Stocks.add(new Stock(id, name, ticker, open, close, high, low));
     }
 
-    public void create(String name){
-        Stock newstock = new Stock();
-        newstock.setName(name);
-        Stocks.add(newstock);
-    }
+
 
 }
