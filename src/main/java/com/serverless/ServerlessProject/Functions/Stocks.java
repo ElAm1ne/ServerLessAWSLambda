@@ -39,8 +39,6 @@ public class Stocks {
             Double high = parseDouble(arg_list[5]);
             Double low = parseDouble(arg_list[6]);
             stockServices.create(id, name, ticker, open, close, high, low);
-
-
         };
 
     }
