@@ -41,5 +41,6 @@ public class Stocks {
             stockServices.create(id, name, ticker, open, close, high, low);
         };
 
+
     }
 }
