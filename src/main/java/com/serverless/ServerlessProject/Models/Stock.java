@@ -73,6 +73,7 @@ public class Stock {
 
     Double Daily_average;
 
+
     public Stock(){
         this.Id  = 0;
         this.Name = "Def";
