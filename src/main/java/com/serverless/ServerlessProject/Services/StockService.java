@@ -23,7 +23,8 @@ public class StockService {
 
     public void create(int id, String name, String ticker, Double open, Double close, Double high, Double low){
         Double average = (high.doubleValue() + low.doubleValue())/2;
-        Stocks.add(new Stock(id, name, ticker, open, close, high, low, average));
+        Double daily_average = (open + close)/2;
+        Stocks.add(new Stock(id, name, ticker, open, close, high, low, average, daily_average));
     }
 
 

@@ -71,6 +71,8 @@ public class Stock {
     Double Low;
     Double Average;
 
+    Double Daily_average;
+
     public Stock(){
         this.Id  = 0;
         this.Name = "Def";
@@ -80,8 +82,9 @@ public class Stock {
         this.High = 0.0;
         this.Low = 0.0;
         this.Average = 0.0;
+        this.Daily_average = 0.0;
     }
-    public Stock(int id, String name, String ticker, Double open, Double close, Double high, Double low, Double average){
+    public Stock(int id, String name, String ticker, Double open, Double close, Double high, Double low, Double average, Double daily_average){
         this.Id  = id;
         this.Name = name;
         this.Ticker = ticker;
@@ -90,9 +93,10 @@ public class Stock {
         this.High = high;
         this.Low = low;
         this.Average = average;
+        this.Daily_average = daily_average;
     }
     @Override
     public String toString(){
-        return "Stock with id : "+this.Id+", Name is : "+this.Name+", Has open, close, high, low = "+this.Open+", "+this.Close+", "+this.High+", "+this.Low+", "+this.Average+".";
+        return "Stock with id : "+this.Id+", Name is : "+this.Name+", Has open, close, high, low = "+this.Open+", "+this.Close+", "+this.High+", "+this.Low+", "+this.Average+", "+ this.Daily_average+".";
     }
 }
