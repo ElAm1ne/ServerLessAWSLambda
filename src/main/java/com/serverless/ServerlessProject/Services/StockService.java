@@ -9,8 +9,16 @@ import java.util.List;
 @Service
 public class StockService {
     private List<Stock> Stocks = new ArrayList<>();
-
+    public String portfolio(){
+        String output = "The stocks in the portfolio are :";
+        for (Stock stock: Stocks) {
+            output += "\n" + stock.toString();
+        }
+        output += ".";
+        return output;
+    }
     public List<Stock> findAll (){
+
         return Stocks;
     }
 
