@@ -12,9 +12,8 @@ public class StockService {
     public String portfolio(){
         String output = "The stocks in the portfolio are :";
         for (Stock stock: Stocks) {
-            output += "\n" + stock.toString();
+            output += "%n" + stock.toString();
         }
-        output += ".";
         return output;
     }
     public List<Stock> findAll (){
