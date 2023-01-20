@@ -61,13 +61,15 @@ public class Stock {
     public void setLow(Double low) {
         Low = low;
     }
-
+    public void setAverage(Double average) {Average = average;}
+    public Double getAverage(){return Average;}
     String Name;
     String Ticker;
     Double Open;
     Double Close;
     Double High;
     Double Low;
+    Double Average;
 
     public Stock(){
         this.Id  = 0;
@@ -77,8 +79,9 @@ public class Stock {
         this.Close = 0.0;
         this.High = 0.0;
         this.Low = 0.0;
+        this.Average = 0.0;
     }
-    public Stock(int id, String name, String ticker, Double open, Double close, Double high, Double low){
+    public Stock(int id, String name, String ticker, Double open, Double close, Double high, Double low, Double average){
         this.Id  = id;
         this.Name = name;
         this.Ticker = ticker;
@@ -86,9 +89,10 @@ public class Stock {
         this.Close = close;
         this.High = high;
         this.Low = low;
+        this.Average = average;
     }
     @Override
     public String toString(){
-        return "Stock with id : "+this.Id+", Name is : "+this.Name+", Has open, close, high, low = "+this.Open+", "+this.Close+", "+this.High+", "+this.Low+".";
+        return "Stock with id : "+this.Id+", Name is : "+this.Name+", Has open, close, high, low = "+this.Open+", "+this.Close+", "+this.High+", "+this.Low+", "+this.Average+".";
     }
 }
