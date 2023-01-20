@@ -70,9 +70,15 @@ public class Stock {
     Double High;
     Double Low;
     Double Average;
-
     Double Daily_average;
 
+    public void setDaily_average(Double daily_average) {
+        Daily_average = daily_average;
+    }
+
+    public Double getDaily_average() {
+        return Daily_average;
+    }
 
     public Stock(){
         this.Id  = 0;
