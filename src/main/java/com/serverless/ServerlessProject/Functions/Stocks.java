@@ -27,6 +27,11 @@ public class Stocks {
     }
 
     @Bean
+    public Supplier<String> portfolio(){
+        return () -> stockServices.portfolio();
+    }
+
+    @Bean
     public Consumer<String> create()
     {
         return (args) -> {
