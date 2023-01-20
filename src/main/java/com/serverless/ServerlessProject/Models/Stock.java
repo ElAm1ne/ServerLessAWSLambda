@@ -58,8 +58,8 @@ public class Stock {
         return Low;
     }
 
-    public void setLow(Double lowy) {
-        Low = lowy;
+    public void setLow(Double low) {
+        Low = low;
     }
 
     String Name;
